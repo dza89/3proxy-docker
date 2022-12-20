@@ -1,8 +1,9 @@
 name: release
 
 on:
-  release: # Docs: <https://git.io/JeBz1#release-event-release>
-    types: [published]
+  push:
+    branches:
+      - "*"
 
 jobs:
   docker-image:
@@ -37,5 +38,4 @@ jobs:
           file: Dockerfile
           push: true
           tags: |
-            ghcr.io/dza89/3proxy:${{ steps.slug.outputs.version-semantic }}
             ghcr.io/dza89/3proxy:latest
