@@ -28,4 +28,4 @@ jobs:
           file: Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ghcr.io/dza89/3proxy-docker:latest
+          tags: ghcr.io/dza89/3proxy:latest
